@@ -20,7 +20,6 @@ struct TLButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(background)
-                
                 Text(title)
                     .foregroundStyle(Color.white)
                     .bold()

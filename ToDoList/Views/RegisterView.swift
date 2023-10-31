@@ -18,7 +18,6 @@ struct RegisterView: View {
                        subtitle: "Start organizing todos",
                        angle: -15,
                        background: .yellow)
-            
             // Register Form
             Form {
                 
@@ -26,19 +25,15 @@ struct RegisterView: View {
                     Text(viewModel.errorMessage)
                         .foregroundColor(Color.red)
                 }
-                
                 TextField("Full Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
-                
                 TextField("Email", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     .autocorrectionDisabled()
-                
                 SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
-                
                 TLButton(
                     title: "Create An Account",
                     background: .green) {
@@ -47,10 +42,6 @@ struct RegisterView: View {
                 .padding()
             }
             .offset(y: -50)
-            
-            // Create Account
-            
-            
             Spacer()
         }
     }

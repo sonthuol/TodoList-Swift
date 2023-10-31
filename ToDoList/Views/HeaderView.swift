@@ -18,7 +18,6 @@ struct HeaderView: View {
             RoundedRectangle(cornerRadius: 0)
                 .foregroundColor(background)
                 .rotationEffect(Angle(degrees: angle))
-            
             VStack {
                 Text(title)
                     .font(.system(size: 50))

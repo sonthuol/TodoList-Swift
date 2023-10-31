@@ -19,7 +19,6 @@ struct LoginView: View {
                            subtitle: "Get things done",
                            angle: 15,
                            background: .pink)
-                
                 // Login Form
                 Form {
                     
@@ -27,14 +26,11 @@ struct LoginView: View {
                         Text(viewModel.errorMessage)
                             .foregroundColor(Color.red)
                     }
-                    
                     TextField("Email address", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    
                     SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
-                    
                     TLButton(
                         title: "Login",
                         background: .blue
@@ -42,18 +38,14 @@ struct LoginView: View {
                         viewModel.login()
                     }
                     .padding()
-                
                 }
                 .offset(y: -50)
-                
                 // Create Account
                 VStack {
                     Text("New around here ?")
-                    
                     NavigationLink("Create An Account", destination: RegisterView())
                 }
                 .padding(.bottom, 50)
-                
                 Spacer()
             }
         }

@@ -17,12 +17,10 @@ class MainViewViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self?.currentUserId = user?.uid ?? ""
             }
-            
         }
     }
     
     public var isSignedIn: Bool {
         return Auth.auth().currentUser != nil
     }
-    
 }
